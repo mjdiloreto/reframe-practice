@@ -1,0 +1,22 @@
+* Counter
+A very basic SPA using re-frame/reagent.
+Based on the [[https://github.com/day8/re-frame-template][re-frame-template]].
+
+** Notes for development with Emacs
+Running from the terminal is trivial with
+#+begin_src
+lein do dev 
+#+end_src
+
+
+Usually though I want to do everything from Emacs using Cider, so my approach is:
+1. cider-jack-in-cljs (C-c M-J)
+2. shadow
+3. browser-repl
+4. Select "y" for "Do you want to open localhost:8240 in a web browser?
+
+This will start the nrepl server, open a repl (in Emacs), open a browser with hot-reload and 
+all the works.
+
+I do not recommend using `cider-connect-cljs` as listed in the documentation for shadow-cljs,
+since it seems to not open a cider session in emacs (i.e. no code completion for js namespace).
