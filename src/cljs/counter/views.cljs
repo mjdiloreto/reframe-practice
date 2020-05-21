@@ -8,5 +8,7 @@
   (let [val (re-frame/subscribe [::subs/counter-value])]
     [:div
      [:h1 "Counter value is " @val]
+     [:button {:on-click #(re-frame/dispatch [:counter.events/counter-inc])}
+      "Increment"]
      ]))
 

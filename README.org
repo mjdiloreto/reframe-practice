@@ -20,3 +20,27 @@ all the works.
 
 I do not recommend using `cider-connect-cljs` as listed in the documentation for shadow-cljs,
 since it seems to not open a cider session in emacs (i.e. no code completion for js namespace).
+
+
+** Small tidbits of knowledge I would normally forget, but will write down for myself later.
+There's probably a German word this section header...
+
+*** Globally reference clojure keywords
+You can define (in events.cljs) an event with id:
+#+begin_src
+:counter-inc
+#+end_src
+And in the view (views.cljs) you reference it via:
+#+begin_src
+:counter-inc
+#+end_src
+
+OR you can define it as:
+#+begin_src
+::counter-inc
+#+end_src
+and in views it becomes:
+#+begin_src
+:counter.events/counter-inc
+#+end_src
+Cider even autocompletes this correctly. Must be nice for larger projects.

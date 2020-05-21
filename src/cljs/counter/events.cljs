@@ -9,3 +9,8 @@
  ::initialize-db
  (fn-traced [_ _]
    db/default-db))
+
+(re-frame/reg-event-db
+ ::counter-inc
+ (fn [db _]
+   (assoc db :counter-value (inc (:counter-value db)))))
