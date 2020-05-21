@@ -1,0 +1,18 @@
+* Re-frame practice
+Using [[https://github.com/day8/re-frame][re-frame]] to create basic Single-Page Applications.
+
+** What are my goals
+1. Practice developing with Emacs
+   1. [[https://docs.cider.mx/cider/index.html][Cider]] for tooling, debug, repl
+   2. [[https://magit.vc/][Magit]] for version control
+   3. [[https://orgmode.org/][Org-mode]] for documentation
+2. Practice Clojure/script
+   1. Learn [[https://leiningen.org/][leiningen]] tooling
+3. Develop proficiency with re-frame
+   1. Quickly spin up basic SPAs to interact with Clojure applications
+   2. Internalize functional approach to building web applications
+   3. Compare with developing applications with React/Redux
+4. Document the process
+   1. So that I don't forget
+   2. To maybe organize some sort of tutorial
+
