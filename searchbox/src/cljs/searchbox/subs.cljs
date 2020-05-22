@@ -3,6 +3,6 @@
    [re-frame.core :as re-frame]))
 
 (re-frame/reg-sub
- ::name
+ ::search-result
  (fn [db]
-   (:name db)))
+   (:search-result db)))

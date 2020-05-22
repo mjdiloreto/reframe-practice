@@ -5,7 +5,11 @@
    ))
 
 (defn main-panel []
-  (let [name (re-frame/subscribe [::subs/name])]
+  (let [result (re-frame/subscribe [::subs/search-result])]
     [:div
-     [:h1 "Hello from " @name]
+     [:h1 "What you typed,"]
+     [:h1 @result ","]
+     [:h1 "has " (if (even? (count @result)) "even" "odd") " length"] ; Imagine this searched something.
+     [:input {:on-change #(re-frame/dispatch [:searchbox.events/set-search-result (-> % .-target .-value)])}]
      ]))
+
