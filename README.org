@@ -9,10 +9,32 @@ Using [[https://github.com/day8/re-frame][re-frame]] to create basic Single-Page
 2. Practice Clojure/script
    1. Learn [[https://leiningen.org/][leiningen]] tooling
 3. Develop proficiency with re-frame
-   1. Quickly spin up basic SPAs to interact with Clojure applications
+   1. <<target>> Quickly spin up basic SPAs to interact with Clojure applications
    2. Internalize functional approach to building web applications
    3. Compare with developing applications with React/Redux
 4. Document the process
    1. So that I don't forget
    2. To maybe organize some sort of tutorial
 
+* To create a new project.
+1. lein new re-frame <project-name>
+2. In a separate terminal run: lein do dev
+   1. This will create the shadow-cljs.edn file necessary for cider to work correctly.
+   2. I do not like this step. It should just work, but I haven't been able to do it another way.
+   3. This is a consequence of using "lein new re-frame" which references "re-frame-template" on Github.
+   4. You can interrupt the process once it compiles the app.
+3. In Emacs: cider-jack-in-cljs (C-c M-J)
+4. when prompted for command: shadow-cljs
+5. when prompted for REPL type: shadow
+6. when prompted for build: :app (should be in a dropdown already, if you have to type it won't work.)
+7. when prompted to open in browser: y
+8. Results:
+   1. (, s s) in emacs opens the repl connected to the browser
+      1. (js/alert "hello") will prompt inside the browser
+   2. (, e e) will evaluate code in the current buffer in the repl, and effects will immediately happen in the browser
+   3. *Saving any file will cause changes in the browser WITHOUT changing app state.*
+      
+* Lessons learned.
+1. This process (using "lein new re-frame") requires quite a bit of setup for a small app.
+2. Re-frame seems very well suited to larger apps, e.g. [[https://github.com/jacekschae/conduit][this awesome "real-world" app]].
+3. Because one of my goals was [[target]], I will change approach and use basic [[https://reagent-project.github.io/][reagent]] for this purpose.

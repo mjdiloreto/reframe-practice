@@ -11,9 +11,10 @@ lein do dev
 
 Usually though I want to do everything from Emacs using Cider, so my approach is:
 1. cider-jack-in-cljs (C-c M-J)
-2. shadow
-3. browser-repl
-4. Select "y" for "Do you want to open localhost:8240 in a web browser?
+2. shadow-cljs 
+3. shadow
+4. :app
+5. Select "y" for "Do you want to open localhost:8240 in a web browser?
 
 This will start the nrepl server, open a repl (in Emacs), open a browser with hot-reload and 
 all the works.
