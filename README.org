@@ -37,7 +37,7 @@ Using [[https://github.com/day8/re-frame][re-frame]] to create basic Single-Page
 * Lessons learned.
 1. This process (using "lein new re-frame") requires quite a bit of setup for a small app.
 2. Re-frame seems very well suited to larger apps, e.g. [[https://github.com/jacekschae/conduit][this awesome "real-world" app]].
-3. Because one of my goals was [[target]], I will change approach and use basic [[https://reagent-project.github.io/][reagent]] for this purpose.
+3. Because one of my goals was [[target][3.1]], I will change approach and use basic [[https://reagent-project.github.io/][reagent]] for this purpose.
 4. Cider cannot interactively debug Clojurescript.
 5. Magit is amazing. I will never use the commandline version again.
 6. Org mode is great for READMEs (unsurprisingly).
